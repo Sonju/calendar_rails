@@ -15,6 +15,9 @@ class UsersController < ApplicationController
     if @user.save
       # thanks your in
       session[:user_id] = @user_id
+
+      # Meeting.where(:user_id) => session[:user_id].to_i
+
     else
       @message = 'User account does exist or password and email do not match.'
       render 'users/signup'

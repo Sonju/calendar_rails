@@ -15,7 +15,7 @@ Rails.application.routes.draw do
 
   # Seesions - login/logout
   get 'users/login' => 'sessions#login'
-  post 'sessions/login_confirmation' => 'sessions#confirmation'
+  post 'users/login_confirmation' => 'sessions#confirmation'
   get 'users/logout' => 'sessions#logout'
 
 
