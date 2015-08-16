@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   # get
   def signup
-    # render a view and lets user sigin
+    # render a view and lets users sigin
   end
 
 # post
@@ -17,7 +17,7 @@ class UsersController < ApplicationController
       session[:user_id] = @user_id
     else
       @message = 'User account does exist or password and email do not match.'
-      render 'user/signup'
+      render 'users/signup'
       # woomp woomp
     end
   end
@@ -25,6 +25,6 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:name, :email, :password_digest, :password_confirmation)
+    params.require(:user).permit(:name, :email, :password, :password_confirmation)
   end
 end
