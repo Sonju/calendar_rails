@@ -1,5 +1,11 @@
 <h2>User Login</h2>
 
+
+<% if @message.nil? == false %>
+  <span class='error'><%= @message %></span>
+
+<% end %>
+
   <%= form_tag '/users/login_confirmation' do %>
 
   Email: <%= text_field_tag :email %>
