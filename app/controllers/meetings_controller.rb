@@ -1,4 +1,7 @@
 class MeetingsController < ApplicationController
+
+  before_filter :authorize
+
   # get
   def index
     # renders a list of meetings

@@ -1,7 +1,7 @@
 class SessionsController < ApplicationController
   # get
   def login
-    # user logins
+    # form to login
 
   end
 
